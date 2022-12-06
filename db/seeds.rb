@@ -9,6 +9,6 @@
 price = rand(1..100)
 
 100.times do
-product = Product.new(name: Faker::Creature::Animal.name, price: price, image_url: "http://www.thisisaplaceholder.com", description: Faker::Quote.jack_handey)
-product.save
+  product = Product.new(name: Faker::Creature::Animal.name, price: price, image_url: "http://www.thisisaplaceholder.com", description: Faker::Quote.jack_handey)
+  product.save
 end

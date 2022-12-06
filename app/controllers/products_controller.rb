@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   def show_last
     product_last = Product.last
     render json: product_last.as_json
-    end
+  end
   def show_spider
     product_spider = Product.find_by(id: 99)
     render json: product_spider.as_json
