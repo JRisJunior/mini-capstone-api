@@ -11,4 +11,8 @@ class ProductsController < ApplicationController
     product_last = Product.last
     render json: product_last.as_json
     end
+  def show_spider
+    product_spider = Product.find_by(id: 99)
+    render json: product_spider.as_json
+  end
 end

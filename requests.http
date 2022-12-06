@@ -5,3 +5,6 @@ GET http://localhost:3000/first_product
 
 ###
 GET http://localhost:3000/last_product
+
+###
+GET http://localhost:3000/spider_product
