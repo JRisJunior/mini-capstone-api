@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-price = 
+price = rand(1..100)
 
-product = Product.new(name: Faker::Book.title, price: 5, image_url: "http://www.thisisaurl.com", description: "this describes widget")
+100.times do
+product = Product.new(name: Faker::Creature::Animal.name, price: price, image_url: Faker::String.random(length: 3..12), description: Faker::Quote.jack_handey)
 product.save
+end
