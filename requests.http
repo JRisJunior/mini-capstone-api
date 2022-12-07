@@ -8,3 +8,6 @@ GET http://localhost:3000/last_product
 
 ###
 GET http://localhost:3000/spider_product
+
+###
+GET http://localhost:3000/show_product/52

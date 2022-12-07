@@ -15,4 +15,11 @@ class ProductsController < ApplicationController
     product_spider = Product.find_by(id: 99)
     render json: product_spider.as_json
   end
+  def show
+    p "params"
+    p params["id"]
+    p "params"
+    product_id = Product.find_by(id: params["id"])
+    render json: product_id.as_json
+  end
 end
