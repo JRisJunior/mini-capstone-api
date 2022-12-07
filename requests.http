@@ -1,11 +1,10 @@
+### get all products
 GET http://localhost:3000//products
 
-###
-
+### get specific product
 GET http://localhost:3000/products/50.json
 
-###
-
+### create data
 POST http://localhost:3000/products.json
 Content-Type: application/json
 
@@ -16,7 +15,7 @@ Content-Type: application/json
   "input_desc": "type on this"
 }
 
-###
+### update data
 PATCH http://localhost:3000/products/75.json
 Content-Type: application/json
 
@@ -28,4 +27,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/products/42.json
+DELETE http://localhost:3000/products/66.json
