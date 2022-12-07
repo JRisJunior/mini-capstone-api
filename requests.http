@@ -17,10 +17,13 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/products/26.json
+PATCH http://localhost:3000/products/52.json
 Content-Type: application/json
 
 {
-  "input_id": "58",
-  "input_price": "100"
+  "input_price": "100",
+  "input_name": "mouse",
+  "input_price": 23,
+  "input_image_url": "https://m.media-amazon.com/images/I/61UxfXTUyvL.jpg",
+  "input_description": "use this with your pc"
 }
