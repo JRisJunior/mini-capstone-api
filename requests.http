@@ -26,5 +26,5 @@ Content-Type: application/json
   "input_description": "view your stuff"
 }
 
-###
+### destroy data
 DELETE http://localhost:3000/products/66.json
