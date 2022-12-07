@@ -17,13 +17,15 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/products/52.json
+PATCH http://localhost:3000/products/75.json
 Content-Type: application/json
 
 {
-  "input_price": "100",
-  "input_name": "mouse",
-  "input_price": 23,
-  "input_image_url": "https://m.media-amazon.com/images/I/61UxfXTUyvL.jpg",
-  "input_description": "use this with your pc"
+  "input_price": "500",
+  "input_name": "monitor",
+  "input_image_url": "https://www.lg.com/us/images/monitors/md06064916/gallery/desktop-03.jpg",
+  "input_description": "view your stuff"
 }
+
+###
+DELETE http://localhost:3000/products/42.json
