@@ -3,5 +3,9 @@ class ProductsController < ApplicationController
     products = Product.all
     render json: products.as_json
   end
-
+  def show
+    product = Product.find_by(id: 1)
+    render json: {message: "hello"}
+  end
+  
 end

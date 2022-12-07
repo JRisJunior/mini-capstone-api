@@ -1,13 +1,5 @@
-GET http://localhost:3000/all_products
+GET http://localhost:3000//products
 
 ###
-GET http://localhost:3000/first_product
 
-###
-GET http://localhost:3000/last_product
-
-###
-GET http://localhost:3000/spider_product
-
-###
-GET http://localhost:3000/show_product/52
+GET http://localhost:3000/products/1
