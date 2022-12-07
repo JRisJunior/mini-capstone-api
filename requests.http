@@ -16,4 +16,11 @@ Content-Type: application/json
   "input_desc": "type on this"
 }
 
-###PATCH http:localhost:3000/products/:id
+###
+PATCH http://localhost:3000/products/26
+Content-Type: application/json
+
+{
+  "input_id": "58",
+  "input_price": "100"
+}
