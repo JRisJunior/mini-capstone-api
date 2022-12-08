@@ -3,5 +3,20 @@ class Product < ApplicationRecord
     created_at.strftime("%B %e, %Y")
   end
 
+  def is_discounted?
+    if price < 10
+      return true
+    else
+      return false
+    end
+  end
   
+  def tax
+    price * 0.09
+  end
+
+  def total
+    @total = price + price.tax
+  end
+
 end
