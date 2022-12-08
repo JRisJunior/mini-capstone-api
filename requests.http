@@ -9,10 +9,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "input_name": "keyboard",
-  "input_price": "50",
-  "input_image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQ052?wid=4000&hei=1800&fmt=jpeg&qlt=95&.v=1495129815011",
-  "input_desc": "type on this"
+  "name": "keyboard",
+  "price": "50",
+  "image_url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQ052?wid=4000&hei=1800&fmt=jpeg&qlt=95&.v=1495129815011",
+  "description": "type on this"
 }
 
 ### update data
