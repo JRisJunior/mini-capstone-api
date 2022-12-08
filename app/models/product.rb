@@ -12,11 +12,11 @@ class Product < ApplicationRecord
   end
   
   def tax
-    price * 0.09
+    @tax = price * 0.09
   end
 
   def total
-    @total = price + price.tax
+    @total = price + tax
   end
 
 end
