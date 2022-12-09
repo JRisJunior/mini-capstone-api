@@ -1,12 +1,14 @@
 class ProductsController < ApplicationController
   def index
-    products = Product.all
-    render json: products.as_json(methods: [:friendly_created_at])
+    @product = Product.all
+    # render json: products.as_json(methods: [:friendly_created_at])
+    render "products/index"
   end
 
   def show
-    product = Product.find_by(id: params[:id])
-    render json: product.as_json(methods: [:friendly_created_at])
+    @product = Product.find_by(id: params[:id])
+    # render json: product.as_json(methods: [:friendly_created_at])
+    render "products/show"
   end
 
   def create
@@ -24,7 +26,7 @@ class ProductsController < ApplicationController
     #   image_url: url,
     #   description: desc
     # )
-      product = Product.new(
+    @product = Product.new(
       name: params[:name],
       price: params[:price],
       image_url: params[:image_url],
@@ -35,7 +37,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    product = Product.find_by(id: params[:id])
+    @product = Product.find_by(id: params[:id])
     product.name = params[:name]
     product.price = params[:price]
     product.image_url = params[:image_url]
@@ -45,7 +47,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    product = Product.find_by(id: params[:id])
+    @product = Product.find_by(id: params[:id])
     product.destroy
     render json: {message: "he gone"}
   end

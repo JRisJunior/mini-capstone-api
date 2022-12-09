@@ -1,0 +1,11 @@
+@product.map do |product|
+  {
+    id: product.id,
+    url: image_url(product, format: :json),
+    friendly_created_at: product.friendly_created_at,
+    is_discounted?: product.is_discounted?,
+    tax: product.tax,
+    total: product.total
+
+  }
+end
