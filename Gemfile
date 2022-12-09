@@ -14,6 +14,7 @@ gem "puma", "~> 5.0"
 gem "awesome_print"
 gem 'faker'
 gem 'jb'
+gem 'seed_dump'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
