@@ -42,12 +42,15 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find_by(id: params[:id])
-    product.name = params[:name]
-    product.price = params[:price]
-    product.image_url = params[:image_url]
-    product.description = params[:description]
-    product.save
-    render json: product.as_json
+    @product.name = params[:name]
+    @product.price = params[:price]
+    @product.image_url = params[:image_url]
+    @product.description = params[:description]
+    if @product.save
+      render json: @product.as_json
+    else
+      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
