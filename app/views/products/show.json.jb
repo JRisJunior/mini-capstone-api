@@ -2,11 +2,15 @@
   id: @product.id,
   created_at: @product.created_at,
   updated_at: @product.updated_at,
-  url: image_url(@product, format: :json),
   friendly_created_at: @product.friendly_created_at,
   is_discounted?: @product.is_discounted?,
   tax: @product.tax,
   total: @product.total,
-  supplier: @product.supplier
+  supplier: @product.supplier,
+  name: @product.name,
+  price: @product.price,
+  images: @product.images,
+  description: @product.description
+
 
 }

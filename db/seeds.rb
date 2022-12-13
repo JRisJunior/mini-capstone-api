@@ -16,3 +16,7 @@ Product.create!([
   {name: "laptop", price: "1000.0", image_url: "test_url", description: "mobile laptop for your computing needs on the move", inventory: nil},
   {name: "tower pc", price: "1000.0", image_url: "test_url", description: "big ass computer for gaming", inventory: nil}
 ])
+
+
+
+# images: @product.images(@product, format: :json),

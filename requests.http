@@ -2,7 +2,7 @@
 GET http://localhost:3000//products.json
 
 ### get specific product
-GET http://localhost:3000/products/112.json
+GET http://localhost:3000/products/52.json
 
 ### create data
 POST http://localhost:3000/products.json
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### update data
-PATCH http://localhost:3000/products/75.json
+PATCH http://localhost:3000/products/52.json
 Content-Type: application/json
 
 {
