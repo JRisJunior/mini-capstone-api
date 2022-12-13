@@ -6,6 +6,9 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { in: 10..500 }
   
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
   
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
