@@ -108,3 +108,6 @@
 #   {name: "hard drive (HDD)", price: "100.0", image_url: "https://m.media-amazon.com/images/I/81yHZDfM3GL.jpg", description: "this stores data", inventory: nil},
 #   {name: "filler the second", price: "159.0", image_url: "www.thisisafiller.com", description: "this is a filler again", inventory: nil}
 # ])
+
+
+
