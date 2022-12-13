@@ -12,20 +12,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    # puts "What is the product you would like to add?"
-    # name = gets.chomp
-    # puts "What is the price?"
-    # price = gets.chomp
-    # puts "What is the image URL?"
-    # url = gets.chomp
-    # puts "What is the description?"
-    # desc = gets.chomp
-    # product = Product.new(
-    #   name: name,
-    #   price: price,
-    #   image_url: url,
-    #   description: desc
-    # )
     @product = Product.new(
       name: params[:name],
       price: params[:price],
