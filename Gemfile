@@ -15,6 +15,7 @@ gem "awesome_print"
 gem 'faker'
 gem 'jb'
 gem 'seed_dump'
+gem 'jwt'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
