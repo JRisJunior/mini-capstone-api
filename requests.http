@@ -34,8 +34,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Other Test name",
+  "email": "testthesecond@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -45,7 +45,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "testthesecond@test.com",
   "password": "password"
 }
 
@@ -61,6 +61,8 @@ Content-Type: application/json
 
 ### orders show
 GET http://localhost:3000/orders/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzEyMTU4MjJ9.R7OBiksusxQ6IlWLLOxVbwz_wviMObPW_LkOgGj8tlE
+
 
 ### orders index
 GET http://localhost:3000//orders.json
