@@ -6,7 +6,7 @@ GET http://localhost:3000/products/52.json
 
 ### create data
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzEyMjIyMDN9.Oge_gcfpKTt6pjWcMDk85g7nD2x9P74GzwxLJkRCrww
+Authorization: Bearer 
 Content-Type: application/json
 
 {
@@ -52,8 +52,7 @@ Content-Type: application/json
 
 ### order create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyMjIwMzd9.kEx4VJwHVO3RVqC3jWqxzAsXL7qbg8MZBSPfcGZ6upU
-Content-Type: application/json
+Authorization: Bearer 
 
 {
   "product_id": "113",
@@ -62,9 +61,9 @@ Content-Type: application/json
 
 ### orders show
 GET http://localhost:3000/orders/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyMTQ3Mjh9.Rztr5wvT7vELga2pBKlytgysL61IHndaFUKW59h_UQY
+Authorization: Bearer 
 
 
 ### orders index
 GET http://localhost:3000//orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyMTQ3Mjh9.Rztr5wvT7vELga2pBKlytgysL61IHndaFUKW59h_UQY
+Authorization: Bearer 
