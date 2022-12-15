@@ -9,10 +9,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "tower pc",
-  "price": "1000",
-  "image_url": "test_url",
-  "description": "big ass computer for gaming"
+  "name": "test computer",
+  "price": "2000",
+  "description": "testing create data",
+   "image_url": []
 }
 
 ### update data
