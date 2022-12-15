@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @order = Order.all
+    @order = Order.where(user_id: current_user.id)
     render json: @order.as_json
   end
 
