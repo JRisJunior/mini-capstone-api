@@ -49,14 +49,14 @@ Content-Type: application/json
   "password": "password"
 }
 
-###
+### order create
 POST http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyMTQ3Mjh9.Rztr5wvT7vELga2pBKlytgysL61IHndaFUKW59h_UQY
 Content-Type: application/json
 
 {
   "product_id": "52",
-  "quantity": "3"
+  "quantity": 3
 }
 
 ### orders show
