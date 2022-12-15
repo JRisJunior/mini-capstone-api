@@ -1,22 +1,27 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
 
   def create
-    @product = Product.find_by(id: params[:product_id])
-    @subtotal = (@product.price * params[:quantity])
-    @tax = (@product.tax * params[:quantity])
-    @total = (@product.total * params[:quantity])
-    @order = Order.new(
-      user_id: current_user.id,
-      product_id: @product.id,
-      quantity: params[:quantity],
-      subtotal: @subtotal,
-      tax: @tax,
-      total: @total
-    )
-    if @order.save
-      render json: @order.as_json
+    if current_user
+      @product = Product.find_by(id: params[:product_id])
+      @subtotal = (@product.price * params[:quantity])
+      @tax = (@product.tax * params[:quantity])
+      @total = (@product.total * params[:quantity])
+      @order = Order.new(
+        user_id: current_user.id,
+        product_id: @product.id,
+        quantity: params[:quantity],
+        subtotal: @subtotal,
+        tax: @tax,
+        total: @total
+      )
+      if @order.save
+        render json: @order.as_json
+      else
+        render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
+      end
     else
-      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
+      render json: {}, status: :unauthorized
     end
   end
 
@@ -30,9 +35,11 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @order = Order.where(user_id: current_user.id)
-    render json: @order.as_json
+    if current_user
+      @order = Order.where(user_id: current_user.id)
+      render json: @order.as_json
+    else
+      render json: {}, status: :unauthorized
+    end
   end
-
-
 end

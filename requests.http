@@ -6,13 +6,14 @@ GET http://localhost:3000/products/52.json
 
 ### create data
 POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzEyMjIyMDN9.Oge_gcfpKTt6pjWcMDk85g7nD2x9P74GzwxLJkRCrww
 Content-Type: application/json
 
 {
-  "name": "test computer",
-  "price": "2000",
-  "description": "testing create data",
-   "image_url": []
+  "name": "cell phone",
+  "price": "1200",
+  "description": "you can call and text people",
+  "supplier_id": "2"
 }
 
 ### update data
@@ -51,12 +52,12 @@ Content-Type: application/json
 
 ### order create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyMTQ3Mjh9.Rztr5wvT7vELga2pBKlytgysL61IHndaFUKW59h_UQY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyMjIwMzd9.kEx4VJwHVO3RVqC3jWqxzAsXL7qbg8MZBSPfcGZ6upU
 Content-Type: application/json
 
 {
-  "product_id": "52",
-  "quantity": 3
+  "product_id": "113",
+  "quantity": 5
 }
 
 ### orders show
