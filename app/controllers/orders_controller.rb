@@ -21,5 +21,10 @@ class OrdersController < ApplicationController
     render json: @order.as_json
   end
 
+  def index
+    @order = Order.all
+    render json: @order.as_json
+  end
+
 
 end
