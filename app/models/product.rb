@@ -10,17 +10,19 @@ class Product < ApplicationRecord
   has_many :images
   has_many :orders
   has_many :category_products
+  has_many :categories, through: :category_products
+
   # def supplier
   #   Supplier.find_by(id: supplier_id)
   # end
   
-  def categories
-    categories = []
-    category_products.each do |cp|
-      categories << cp.category
-    end
-    categories
-  end
+  # def categories
+  #   categories = []
+  #   category_products.each do |cp|
+  #     categories << cp.category
+  #   end
+  #   categories
+  # end
 
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
