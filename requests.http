@@ -70,3 +70,9 @@ Authorization: Bearer
 
 ### carted_products create
 POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzE1NjgxNjF9.6zZ8u8VFaDz96wKNAgBXB25NV9hs4IKoz2Q2EjXtxHk
+
+{
+  "product_id": "52",
+  "quantity": 2
+}
