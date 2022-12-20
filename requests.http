@@ -77,3 +77,6 @@ Content-Type: application/json
   "product_id": 104,
   "quantity": 2
 }
+
+### carted_products index
+GET http://localhost:3000/carted_products.json
