@@ -20,3 +20,14 @@ Product.create!([
 
 
 # images: @product.images(@product, format: :json),
+
+# subtotal = 0
+# total_tax = 0
+# grand_total = 0
+# cp.each_with_index do |cp, i|
+#   product = Product.find_by(id: cp.product_id)
+#   subtotal += (product.price * cp.quantity)
+#   total_tax += (product.tax * cp.quantity)
+#   grand_total += (product.total * cp.quantity)
+#   p i
+# end

@@ -18,8 +18,12 @@ class CartedProductsController < ApplicationController
   end
 
   def index
-    @carted_products = CartedProduct.all
-    render json: @carted_products.as_json
+    if current_user
+      @carted_products = CartedProduct.where(status: "carted", user_id: current_user.id)
+      render json: @carted_products.as_json
+    else
+      render json: {}, status: :unauthorized
+    end
   end
 
 

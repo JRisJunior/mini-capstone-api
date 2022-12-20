@@ -3,19 +3,29 @@ class OrdersController < ApplicationController
 
   def create
     if current_user
-      @product = Product.find_by(id: params[:product_id])
-      @subtotal = (@product.price * params[:quantity])
-      @tax = (@product.tax * params[:quantity])
-      @total = (@product.total * params[:quantity])
+      @carted_products = CartedProduct.where(status: "carted", user_id: current_user.id)
+      @subtotal = 0
+      @total_tax = 0
+      @grand_total = 0
+      @carted_products.each_with_index do |cp, i|
+        @product = Product.find_by(id: cp.product_id)
+        @subtotal += (@product.price * cp.quantity)
+        @total_tax += (@product.tax * cp.quantity)
+        @grand_total += (@product.total * cp.quantity)
+      end
       @order = Order.new(
         user_id: current_user.id,
-        product_id: @product.id,
-        quantity: params[:quantity],
         subtotal: @subtotal,
-        tax: @tax,
-        total: @total
+        tax: @total_tax,
+        total: @grand_total
       )
       if @order.save
+        @carted_products = CartedProduct.where(status: "carted", user_id: current_user.id)
+        @carted_products.each do |cp|
+          cp.status = "purchased"
+          cp.order_id = @order.id
+          cp.save
+        end
         render json: @order.as_json
       else
         render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
