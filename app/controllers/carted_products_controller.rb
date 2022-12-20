@@ -16,4 +16,7 @@ class CartedProductsController < ApplicationController
       render json: {errors: @carted_product.errors.full_messages}, status: :unprocessable_entity
     end
   end
+
+
+  
 end
