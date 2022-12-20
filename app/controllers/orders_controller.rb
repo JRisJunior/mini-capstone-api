@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find_by(id: params[:id])
     if current_user.id == @order.user_id
-      render json: @order.as_json
+      render template: "orders/show"
     else
       render json: {error: "You must be logged in to view this order"}
     end

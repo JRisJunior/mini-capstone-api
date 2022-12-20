@@ -22,9 +22,15 @@ class CartedProductsController < ApplicationController
       @carted_products = CartedProduct.where(status: "carted", user_id: current_user.id)
       render json: @carted_products.as_json
     else
-      render json: {}, status: :unauthorized
+      render template: "carted_products/index"
     end
   end
 
+  def destroy
+    cp = CartedProduct.find_by(id: params[:id])
+    cp.status = "removed"
+    cp.save
+    render json: {message: "item removed"}
+  end
 
 end
