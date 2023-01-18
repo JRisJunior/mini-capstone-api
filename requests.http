@@ -6,25 +6,26 @@ GET http://localhost:3000/products/52.json
 
 ### create data
 POST http://localhost:3000/products.json
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzQxNTk1ODB9.i3fq5NkbK5EuYU4YpzKJFyQDja0fZJIDlf5StKFkPLw
 Content-Type: application/json
 
 {
-  "name": "cell phone",
-  "price": "1200",
-  "description": "you can call and text people",
-  "supplier_id": "2"
+  "name": "testtttt",
+  "price": "100",
+  "description": "this is how you test things",
+  "supplier_id": "1"
 }
 
 ### update data
-PATCH http://localhost:3000/products/52.json
+PATCH http://localhost:3000/products/115.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzQxNTk1ODB9.i3fq5NkbK5EuYU4YpzKJFyQDja0fZJIDlf5StKFkPLw
 Content-Type: application/json
 
 {
-  "price": "500",
-  "name": "monitor",
-  "image_url": "https://www.lg.com/us/images/monitors/md06064916/gallery/desktop-03.jpg",
-  "description": "view your stuff"
+  "price": "200",
+  "name": "other test",
+  "description": "this is me testing",
+  "supplier_id": "2"
 }
 
 ### destroy data
@@ -46,7 +47,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "testthesecond@test.com",
   "password": "password"
 }
 
